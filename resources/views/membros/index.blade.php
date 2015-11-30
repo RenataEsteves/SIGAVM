@@ -16,7 +16,6 @@
                         <tr>
                             <th>#</th>
                             <th>Nome</th>
-                            <th>RG</th>
                             <th>CPF</th>
                             <th>Contato</th>
                             <th>E-mail</th>
@@ -30,14 +29,12 @@
                             @foreach($membros as $membro)
                                     <tr>
                                         <td>{{++$count}}</td>
-                                        <td>{{ $membro->nome }}</td>
-                                        <td>{{ $membro->rg }}</td>
+                                        <td style="width: 15%">{{ $membro->nome }}</td>
                                         <td>{{ $membro->cpf }}</td>
                                         <td>{{ $membro->fone }}</td>
                                         <td>{{ $membro->email }}</td>
                                         <td>{{ $membro->id_Inst }}</td>
                                         <td>{{ $membro->anoCadastro }}</td>
-                                        <td>{{ $membro->ativo }}</td>
                                         <td>{{ $membro->ativo  == 1 ? 'Ativo':'Inativo' }}</td>
                                         <td><a href="{{ route('membros.show', $membro->id) }}" class="btn btn-sm btn-primary">Detalhes</a> </td>
                                         <td><a href="{{ route('membros.edit', $membro->id) }}" class="btn btn-sm btn-success">Editar</a> </td>
@@ -46,7 +43,10 @@
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                         </form></td>
-                                     </tr>
+                                        {{--<td><button class="btn btn-deletar btn-sm" type="button" data-toggle="modal" data-target="#__form">--}}
+                                                {{--<i class="glyphicon glyphicon-trash"></i> Deletar--}}
+                                            {{--</button></td>--}}
+                                     {{--</tr>--}}
                             @endforeach
                         </tbody>
                     </table>

@@ -5,8 +5,8 @@
 
         <div class="row">
             <!-- Cadastro -->
-            <div class="col-xs-5 col-xs-offset-4">
-                <h1> Cadastro de Instituições </h1>
+            <div class="col-xs-5 col-xs-offset-4 ">
+                <h1> Editando Instituição </h1>
             </div>
         </div>
 

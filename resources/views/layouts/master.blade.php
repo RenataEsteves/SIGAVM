@@ -12,23 +12,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    {{--<link rel="icon" href="../../favicon.ico">--}}
-
-    <!-- Bootstrap core CSS -->
-    {{--<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">--}}
-
-    <!-- Custom styles for this template -->
-    {{--<link href="navbar-fixed-top.css" rel="stylesheet">--}}
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><!--<script src="/bootstrap/js/ie8-responsive-file-warning.js"></script>--><![endif]-->
-    {{--<script src="/bootstrap/js/ie-emulation-modes-warning.js"></script>--}}
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>-->
-    <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
-    <![endif]-->
 </head>
 
 <body>
@@ -63,11 +46,20 @@
                     </ul>
                 </li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
-                {{--<li><a href="../navbar/">Default</a></li>--}}
-                {{--<li><a href="../navbar-static-top/">Static top</a></li>--}}
-                <li class="active"><a href="/auth/logout">Logout <span class="sr-only">(current)</span></a></li>
+                @if (Auth::guest())
+                    <li><a href="{{ url('/auth/login') }}">Login</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }}&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-user"></span></span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/auth/logout') }}">Sair</a></li>
+                        </ul>
+                    </li>
+                @endif
             </ul>
+
         </div><!--/.nav-collapse -->
     </div>
 </nav>

@@ -6,7 +6,7 @@
             <div class="col-xs-12">
                 <div class="col-xs-6 col-xs-offset-3 text-center">
                     <br>
-                    <h1> Listagem de Membros [Detalhes] </h1>
+                    <h1> Membro [Detalhes] </h1>
                     <br>
                 </div>
 
@@ -24,34 +24,30 @@
                             <th>Fone</th>
                             <th>Fone Emerg</th>
                             <th>E-mail</th>
-                            <th>Instituição</th>
                             <th>Ano Cad</th>
-                            <th>Qtd Dias</th>
+                            {{--<th>Qtd Dias</th>--}}
                             <th>Situação</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>{{ $membro->id }}</td>
-                            <td>{{ $membro->nome }}</td>
+                            <td style="width: 15%">{{ $membro->nome }}</td>
                             <td>{{ $membro->rg }}</td>
                             <td>{{ $membro->orgaoEmissor }}</td>
                             <td>{{ $membro->cpf }}</td>
                             <td>{{ $membro->fone }}</td>
                             <td>{{ $membro->foneEmerg }}</td>
                             <td>{{ $membro->email }}</td>
-                            <td>{{ $membro->id_Inst }}</td>
                             <td>{{ $membro->anoCadastro }}</td>
-                            <td>{{ $membro->qtdDias }}</td>
-                            <td>{{ $membro->ativo }}</td>
+{{--                            <td>{{ $membro->qtdDias }}</td>--}}
+                            <td>{{ $membro->ativo  == 1 ? 'Ativo':'Inativo' }}</td>
                         </tr>
                         </tbody>
 
                         {{--Tabela de enderecos--}}
                         <table class="table table-striped">
-                            <br>
-                            <br>
-                            <legend> Endereço </legend>
+                            {{--<br>--}}
                             <thead>
                             <tr>
                                 <th>Rua</th>
@@ -61,7 +57,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>w
+                            <tr>
                                 <td>{{ $membro->rua }}</td>
                                 <td>{{ $membro->numero }}</td>
                                 <td>{{ $membro->bairro }}</td>
@@ -69,8 +65,32 @@
                             </tr>
                             </tbody>
                         </table>
+
+                        {{--Tabela de Instituição--}}
+                        <table class="table table-striped">
+                            <br>
+                            <legend> Instituição </legend>
+                            <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Fone</th>
+                                <th>E-mail</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>{{ $instituicao->nome }}</td>
+                                <td>{{ $instituicao->fone }}</td>
+                                <td>{{ $instituicao->email }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
                     </table>
                 </div>
+            </div>
+            <div class="col-xs-offset-11 col-xs-1">
+                <a href="/membros" class="btn btn-sm btn-default">Voltar</a>
             </div>
         </div>
     </div>

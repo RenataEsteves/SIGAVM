@@ -1,6 +1,6 @@
 <HTML>
 	<HEADER>
-		<TITLE> SIGAVM</TITLE>
+		<TITLE> SIGAVM </TITLE>
 
 		<meta charset="UTF-8">
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">

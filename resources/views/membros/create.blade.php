@@ -33,7 +33,7 @@
 						
 						<label for="org" class="col-xs-1">Orgão Emissor:</label>
 						<div class="col-xs-2">
-							<input type="text" class="form-control" name="orgaoEmissor" placeholder="Ex.: SSP / MD">
+							<input type="text" class="form-control" name="orgaoEmissor" placeholder="Ex.: SSP / SESDEC">
 						</div>
 
 						<label for="rg" class="col-xs-1 control-label"><p class="text-left">CPF:</p></label>
@@ -140,7 +140,7 @@
 
 					<!--Botão enviar-->
 					<div class="form-group">
-						<div class=" col-xs-offset-10 col-xs-2">
+						<div class="col-xs-offset-10 col-xs-2">
 							<button type="submit" class="btn btn-default">Enviar Informações</button>
 						</div>
 					</div>

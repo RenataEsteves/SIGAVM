@@ -6,14 +6,14 @@
             <div class="col-xs-12">
                 <div class="col-xs-7 col-xs-offset-3 text-center">
                     <br>
-                    <h1> Listagem de Instituição [Detalhes] </h1>
+                    <h1> Instituição [Detalhes] </h1>
                     <br>
                 </div>
 
                 <div class="table-responsive">
                     <table class="table table-striped"> {{--action="/instituicaos/{{$instituicao->id}}"--}}
                         {{--{{ csrf_field() }}--}}
-                        <legend> Dados </legend>
+                        <legend> Dados Cadastrais </legend>
                         <thead>
                         <tr>
                             <th>Código</th>
@@ -34,8 +34,6 @@
                         {{--Tabela de enderecos--}}
                         <table class="table table-striped">
                             <br>
-                            <br>
-                            <legend> Endereço </legend>
                             <thead>
                             <tr>
                                 <th>Rua</th>
@@ -55,6 +53,9 @@
                         </table>
                     </table>
                 </div>
+            </div>
+            <div class="col-xs-offset-11 col-xs-2">
+                <a href="/instituicao" class="btn btn-sm btn-default">Voltar</a>
             </div>
         </div>
     </div>

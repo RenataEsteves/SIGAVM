@@ -5,8 +5,8 @@
 
         <div class="row">
             <!-- Cadastro -->
-            <div class="col-xs-4 col-xs-offset-4">
-                <h1> Cadastro de Membros </h1>
+            <div class="col-xs-4 col-xs-offset-4 text-center">
+                <h1> Editando Membro </h1>
             </div>
         </div>
 
@@ -33,7 +33,7 @@
 
                         <label for="org" class="col-xs-1">Orgão Emissor:</label>
                         <div class="col-xs-2">
-                            <input type="text" class="form-control" name="orgaoEmissor" value="{{$membro->orgaoEmissor}}" placeholder="Ex.: SSP / MD">
+                            <input type="text" class="form-control" name="orgaoEmissor" value="{{$membro->orgaoEmissor}}" placeholder="Ex.: SSP / SESDEC">
                         </div>
 
                         <label for="rg" class="col-xs-1 control-label"><p class="text-left">CPF:</p></label>
@@ -123,7 +123,7 @@
                         </div>
                         <label for="n" class="col-xs-1 control-label">Número:</label>
                         <div class="col-xs-2">
-                            <input type="text" class="form-control" name="numero" placeholder="Número" />
+                            <input type="text" class="form-control" name="numero" value="{{$membro->numero}}" placeholder="Numero" />
                         </div>
                     </div>
 

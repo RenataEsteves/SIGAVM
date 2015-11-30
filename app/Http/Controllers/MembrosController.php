@@ -36,8 +36,6 @@ class MembrosController extends Controller
     public function create()
     {
         $insts = Instituicao::all();
-        //dd($insts);
-
         return view('membros.create',compact('insts'));
     }
 
@@ -79,7 +77,11 @@ class MembrosController extends Controller
 
         $membros = new Membro();
         $membro = $membros->find($id);
-        return view('membros.show', compact('membro'));
+
+        $instituicao = new Instituicao();
+        $instituicao = $instituicao->find($membro->id_Inst);
+
+        return view('membros.show', compact('membro', 'instituicao'));
 
     }
 
