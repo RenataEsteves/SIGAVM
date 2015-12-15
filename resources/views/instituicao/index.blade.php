@@ -27,14 +27,12 @@
                                 <td>{{++$count}}</td>
                                 <td>{{ $instituicao->nome }}</td>
                                 <td>{{ $instituicao->fone }}</td>
-                                <td>{{ $instituicao->email }}</td>
-                                <td><a href="{{ route('instituicao.show', $instituicao->id) }}" class="btn btn-sm btn-primary">Detalhes</a> </td>
-                                <td><a href="{{ route('instituicao.edit', $instituicao->id) }}" class="btn btn-sm btn-success">Editar</a> </td>
-                                <td><form method="POST" accept-charset="UTF-8" action="/instituicao/{{ $instituicao->id }}">
-                                        <button type="submit" class="btn btn-sm btn-danger">Deletar</button>
-                                        {{ csrf_field() }}
-                                        {{ method_field('DELETE') }}
-                                    </form></td>
+                                <td style="width: 25%">{{ $instituicao->email }}</td>
+                                <td><a href="{{ route('instituicao.show', $instituicao->id) }}" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-list-alt"></i> Detalhes</a> </td>
+                                <td><a href="{{ route('instituicao.edit', $instituicao->id) }}" class="btn btn-sm btn-success"><i class="glyphicon glyphicon-edit"></i> Editar</a> </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#confirm_delet"><i class="glyphicon glyphicon-trash"></i> Deletar</button>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -43,4 +41,5 @@
             </div>
         </div>
     </div>
+    @include('instituicao.confirm_delet')
 @endsection

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <TITLE>SIGAVM</TITLE>
+    <TITLE> SIGAVM </TITLE>
 
     <meta charset="UTF-8">
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -26,35 +26,35 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">SIGAVM</a>
+            <a class="navbar-brand" href="#"> SIGAVM </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Início</a></li>
+                <li class="active"><a href="/"> <i class="glyphicon glyphicon-home"></i> Início </a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultar <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/membros">Membros</a></li>
-                        <li><a href="/instituicao">Instituição</a></li>
+                        <li><a href="/membros"> Membros </a></li>
+                        <li><a href="/instituicao"> Instituição </a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastrar <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/membros/create">Membros</a></li>
-                        <li><a href="/instituicao/create">Instituição</a></li>
+                        <li><a href="/membros/create"> Membros </a></li>
+                        <li><a href="/instituicao/create"> Instituição </a></li>
                     </ul>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
-                    <li><a href="{{ url('/auth/login') }}">Login</a></li>
+                    <li><a href="{{ url('/auth/login') }}"> Login </a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }}&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-user"></span></span> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/auth/logout') }}">Sair</a></li>
+                            <li><a href="{{ url('/auth/logout') }}"><i class="glyphicon glyphicon-off"></i> Sair </a></li>
                         </ul>
                     </li>
                 @endif

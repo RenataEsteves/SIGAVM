@@ -17,8 +17,8 @@ class CreateMembrosTable extends Migration
             $table->integer('id_Inst')->unsigned();
             $table->foreign('id_inst')->references('id')->on('instituicaos');
 
-            $table->string('nome_Inst');
-            $table->foreign('nome_Inst')->references('nome')->on('instituicaos');
+//            $table->string('nome_Inst');
+//            $table->foreign('nome_Inst')->references('nome')->on('instituicaos');
 
             $table->string('nome', 40);
             $table->string('cpf', 14)->unique();

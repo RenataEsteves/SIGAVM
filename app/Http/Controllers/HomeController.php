@@ -2,30 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Instituicao;
-use App\Membro;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 
-class MembrosController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-    
     public function index()
     {
-        $membros = Membro::all()->sortBy('nome');
-        return view('membros.index', compact('membros'));
+        return view('layouts.home');
     }
 
     /**
@@ -35,10 +26,8 @@ class MembrosController extends Controller
      */
     public function create()
     {
-        $insts = Instituicao::all();
-        return view('membros.create',compact('insts'));
+        //
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -48,22 +37,7 @@ class MembrosController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-
-        $contDias = 0;
-
-        if(isset($request->dia)) {
-            $contDias = count($request->dia);
-        }
-
-        $membro = new Membro();
-
-        $input['qtdDias']=$contDias;
-
-        dd($input);
-        $membro->create($input);
-        return redirect('membros');
-
+        //
     }
 
     /**
@@ -74,15 +48,7 @@ class MembrosController extends Controller
      */
     public function show($id)
     {
-
-        $membros = new Membro();
-        $membro = $membros->find($id);
-
-        $instituicao = new Instituicao();
-        $instituicao = $instituicao->find($membro->id_Inst);
-
-        return view('membros.show', compact('membro', 'instituicao'));
-
+        //
     }
 
     /**
@@ -93,10 +59,7 @@ class MembrosController extends Controller
      */
     public function edit($id)
     {
-        $membro = Membro::findOrFail($id);
-        $insts = Instituicao::all();
-
-        return view('membros.edit', array('membro' => $membro, 'insts' => $insts));
+        //
     }
 
     /**
@@ -108,10 +71,7 @@ class MembrosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $membro = Membro::findOrFail($id);
-        $input = $request->all();
-        $membro->fill($input)->save();
-        return redirect('/membros');
+        //
     }
 
     /**
@@ -122,9 +82,6 @@ class MembrosController extends Controller
      */
     public function destroy($id)
     {
-        $membro = Membro::findOrFail($id);
-        $membro->delete();
-
-        return redirect('/membros');
+        //
     }
 }

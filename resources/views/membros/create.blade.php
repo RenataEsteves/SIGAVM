@@ -15,7 +15,7 @@
 				<!--Inicio do Formulário-->
 				<form class="form-horizontal" method="post" action="{{route('membros.store')}}">
 					{{ csrf_field() }}
-					<!--Nome do Cadêmico-->
+							<!--Nome do Cadêmico-->
 					<div class="form-group">
 						<legend>Dados Pessoais</legend>
 						<label for="nome" class="col-xs-2 control-label"><p class="text-left">Nome Completo:</p></label>
@@ -25,12 +25,12 @@
 					</div>
 
 					<!--RG, ORGÃO EXPEDITOR e CPF -->
-					<div class="form-group"> 
+					<div class="form-group">
 						<label for="rg" class="col-xs-2 control-label"><p class="text-left">RG:</p></label>
 						<div class="col-xs-4">
 							<input type="text" class="form-control" name="rg" placeholder="RG" size=10 />
 						</div>
-						
+
 						<label for="org" class="col-xs-1">Orgão Emissor:</label>
 						<div class="col-xs-2">
 							<input type="text" class="form-control" name="orgaoEmissor" placeholder="Ex.: SSP / SESDEC">
@@ -60,7 +60,7 @@
 					</div>
 
 					<!-- Onde Estuda-->
-					<div class="form-group"> 
+					<div class="form-group">
 						<label for="tipo" class="col-xs-2 control-label"> <p class="text-left">Instituição:</p></label>
 						<div class="col-xs-7">
 							<select class="form-control" name="id_Inst">
@@ -72,49 +72,43 @@
 						{{--<!-- Ano de cadastro do membro-->--}}
 						<label for="Cad" class="col-xs-1">Ano de Cadastro:</label>
 						<div class="col-xs-2">
-						<input type="text" class="form-control anoCad" name="anoCadastro" placeholder="Ex.: 2015/1" size=6/>
+							<input type="text" class="form-control anoCad" name="anoCadastro" placeholder="Ex.: 2015/1" size=6/>
 						</div>
 
 					</div>
-					{{--</div>--}}
 					<!--Dias em que estuda -->
 					<div class="form-group">
-							<label for="tipo" class="col-xs-2 control-label"><p class=" text-left">Selecione os dias:</p></label>
-							<div class="col-xs-6">
-								<label class="checkbox-inline">
-									<input type="checkbox" name="dia[segunda]" value="1"> Segunda
-								</label>
-								<label class="checkbox-inline">
-									<input type="checkbox" name="dia[terca]" value="1"> Terça
-								</label>
-								<label class="checkbox-inline">
-									<input type="checkbox" name="dia[quarta]" value="1"> Quarta
-								</label>
-								<label class="checkbox-inline">
-									<input type="checkbox" name="dia[quinta]" value="1"> Quinta
-								</label>
-								<label class="checkbox-inline">
-									<input type="checkbox" name="dia[sexta]" value="1"> Sexta
-								</label>
-							</div>
-						{{--<!-- Ano de cadastro do membro-->--}}
-						{{--<label for="Cad" class="col-xs-1 control-label">Ano de Cadastro:</label>--}}
-						{{--<div class="col-xs-2">--}}
-								{{--<input type="text" name="anoCadastro" placeholder="Ex.: 2015/1">--}}
-						{{--</div>--}}
-							<!-- Situação do usuário - ativo ou não-->
-							<label for="tipo" class="col-xs-2 control-label">Situação:</label>
-							<div class="col-xs-2">
-								<label class="radio-inline">
-									<input type="radio" name="ativo" checked="checked" value="1"> Ativo
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="ativo" value="0"> Inativo
-								</label>
-							</div>
+						<label for="tipo" class="col-xs-2 control-label"><p class=" text-left">Selecione os dias:</p></label>
+						<div class="col-xs-6">
+							<label class="checkbox-inline">
+								<input type="checkbox" name="segunda" value="1"> Segunda
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="terca" value="1"> Terça
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="dia[quarta]" value="1"> Quarta
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="dia[quinta]" value="1"> Quinta
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="dia[sexta]" value="1"> Sexta
+							</label>
+						</div>
+						<!-- Situação do usuário - ativo ou não-->
+						<label for="tipo" class="col-xs-2 control-label">Situação:</label>
+						<div class="col-xs-2">
+							<label class="radio-inline">
+								<input type="radio" name="ativo" checked="checked" value="1"> Ativo
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="ativo" value="0"> Inativo
+							</label>
+						</div>
 					</div>
-					
-  					<!--Endereço-->
+
+					<!--Endereço-->
 					<div class="form-group">
 						<legend>Endereço</legend>
 						<label for="rua" class="col-xs-2 control-label"><p class="text-left">Rua:</p></label>
@@ -140,11 +134,11 @@
 
 					<!--Botão enviar-->
 					<div class="form-group">
-						<div class="col-xs-offset-10 col-xs-2">
-							<button type="submit" class="btn btn-default">Enviar Informações</button>
+						<div class="col-xs-offset-11 col-xs-0">
+							<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i> Cadastrar</button>
 						</div>
 					</div>
-				</form>	
+				</form>
 			</div>
 		</div>
 	</div>

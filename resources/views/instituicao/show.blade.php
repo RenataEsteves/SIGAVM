@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="col-xs-offset-11 col-xs-2">
-                <a href="/instituicao" class="btn btn-sm btn-default">Voltar</a>
+                <a href="/instituicao" type="button" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-arrow-left"></i> Voltar</a>
             </div>
         </div>
     </div>

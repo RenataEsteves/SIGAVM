@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+@extends('welcome')
+
+@section('Content')
 <html>
     <head>
         <title>Laravel</title>
@@ -37,9 +39,15 @@
     </head>
     <body>
         <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <img style="margin-top: 15%" src="bootstrap/img/construcao.png">
+                </div>
             </div>
+            {{--<div class="content">--}}
+                {{--<div class="title">Laravel 5</div>--}}
+            {{--</div>--}}
         </div>
     </body>
 </html>
+@endsection

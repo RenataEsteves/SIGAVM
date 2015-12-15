@@ -16,19 +16,18 @@
 //});
 
 Route::resource('/', 'MembrosController');
+//Route::resource('/', 'HomeController');
+//Route::get('/', 'resources.welcome');
 
+Route::resource('membros', 'MembrosController');
 Route::get('/membros/show', 'MembrosController@Show');
 Route::get('/membros/edit', 'MembrosController@Edit');
 Route::get('/membros/delete', 'MembrosController@Destroy');
 
+Route::resource('instituicao', 'InstituicaoController');
 Route::get('/instituicao/show', 'InstituicaoController@Show');
 Route::get('/instituicao/edit', 'InstituicaoController@Edit');
 Route::get('/instituicao/delete', 'InstituicaoController@Destroy');
-
-Route::resource('membros', 'MembrosController');
-
-Route::resource('instituicao', 'InstituicaoController');
-
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

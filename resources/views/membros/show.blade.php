@@ -90,7 +90,8 @@
                 </div>
             </div>
             <div class="col-xs-offset-11 col-xs-1">
-                <a href="/membros" class="btn btn-sm btn-default">Voltar</a>
+                {{--<a href="/membros" class="btn btn-sm btn-default">Voltar</a>--}}
+                <a href="/membros" type="button" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-arrow-left"></i> Voltar</a>
             </div>
         </div>
     </div>

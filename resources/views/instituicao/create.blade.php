@@ -63,8 +63,8 @@
 
 					<!--Botão enviar-->
 					<div class="form-group">
-						<div class=" col-xs-offset-10 col-xs-2">
-							<button type="submit" class="btn btn-default">Enviar Informações</button>
+						<div class=" col-xs-offset-11 col-xs-0">
+							<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i> Cadastrar</button>
 						</div>
 					</div>
 				</form>	
