@@ -36,11 +36,13 @@ class CreateMembrosTable extends Migration
             $table->string('bairro', 30);
             $table->string('cidade', 40);
 
-            $table->boolean('dia[segunda]');
-            $table->boolean('dia[terca]');
-            $table->boolean('dia[quarta]');
-            $table->boolean('dia[quinta]');
-            $table->boolean('dia[sexta]');
+            $table->boolean('segunda');
+            $table->boolean('terca');
+            $table->boolean('quarta');
+            $table->boolean('quinta');
+            $table->boolean('sexta');
+
+            $table->boolean('dia');
 
             $table->timestamps();
         });

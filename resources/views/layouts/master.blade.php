@@ -45,6 +45,7 @@
                         <li><a href="/instituicao/create"> Instituição </a></li>
                     </ul>
                 </li>
+                <li><a href="/calculos"> Calcular </a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

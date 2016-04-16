@@ -5,7 +5,7 @@
 
 		<div class="row">
 			<!-- Cadastro -->
-			<div class="col-xs-4 col-xs-offset-4">
+			<div class="col-xs-12 text-center">
 				<h1> Cadastro de Membros </h1>
 			</div>
 		</div>
@@ -81,10 +81,10 @@
 						<label for="tipo" class="col-xs-2 control-label"><p class=" text-left">Selecione os dias:</p></label>
 						<div class="col-xs-6">
 							<label class="checkbox-inline">
-								<input type="checkbox" name="segunda" value="1"> Segunda
+								<input type="checkbox" name="dia[segunda]" value="1"> Segunda
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="terca" value="1"> Terça
+								<input type="checkbox" name="dia[terca]" value="1"> Terça
 							</label>
 							<label class="checkbox-inline">
 								<input type="checkbox" name="dia[quarta]" value="1"> Quarta

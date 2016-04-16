@@ -5,7 +5,7 @@
 
         <div class="row">
             <!-- Cadastro -->
-            <div class="col-xs-4 col-xs-offset-4 text-center">
+            <div class="col-xs-12 text-center">
                 <h1> Editando Membro </h1>
             </div>
         </div>

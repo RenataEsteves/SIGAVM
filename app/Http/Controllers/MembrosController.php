@@ -54,13 +54,20 @@ class MembrosController extends Controller
 
         if(isset($request->dia)) {
             $contDias = count($request->dia);
+
+            foreach($request->dia as $i => $item){
+                $input[$i] = "$item";
+            }
+
+            unset($input['dia']);
         }
 
         $membro = new Membro();
 
-        $input['qtdDias']=$contDias;
+        $input["qtdDias"]=$contDias;
 
-        dd($input);
+//        dd($input);
+
         $membro->create($input);
         return redirect('membros');
 
@@ -95,7 +102,6 @@ class MembrosController extends Controller
     {
         $membro = Membro::findOrFail($id);
         $insts = Instituicao::all();
-
         return view('membros.edit', array('membro' => $membro, 'insts' => $insts));
     }
 

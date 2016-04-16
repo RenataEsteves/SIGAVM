@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="col-xs-7 col-xs-offset-3 text-center">
+                <div class="col-xs-12 text-center">
                     <br>
                     <h1> Instituição [Detalhes] </h1>
                     <br>

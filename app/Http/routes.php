@@ -15,25 +15,31 @@
 //    return view('layouts.home');
 //});
 
-Route::resource('/', 'MembrosController');
+Route::get('/calculos', 'CalculosController@Index');
+
+    Route::resource('/', 'MembrosController');
 //Route::resource('/', 'HomeController');
 //Route::get('/', 'resources.welcome');
 
-Route::resource('membros', 'MembrosController');
-Route::get('/membros/show', 'MembrosController@Show');
-Route::get('/membros/edit', 'MembrosController@Edit');
-Route::get('/membros/delete', 'MembrosController@Destroy');
+    Route::resource('membros', 'MembrosController');
+    Route::get('/membros/show', 'MembrosController@Show');
+    Route::get('/membros/edit', 'MembrosController@Edit');
+    Route::get('/membros/delete', 'MembrosController@Destroy');
 
-Route::resource('instituicao', 'InstituicaoController');
-Route::get('/instituicao/show', 'InstituicaoController@Show');
-Route::get('/instituicao/edit', 'InstituicaoController@Edit');
-Route::get('/instituicao/delete', 'InstituicaoController@Destroy');
+    Route::resource('instituicao', 'InstituicaoController');
+    Route::get('/instituicao/show', 'InstituicaoController@Show');
+    Route::get('/instituicao/edit', 'InstituicaoController@Edit');
+    Route::get('/instituicao/delete', 'InstituicaoController@Destroy');
+
+//Route::resource('Calculos', 'CalculosController');
+//Route::get('/Calculos/edit', 'CalculosController@Edit');
+//Route::get('/Calculos/delete', 'CalculosController@Destroy');
 
 // Authentication routes...
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
+    Route::get('auth/login', 'Auth\AuthController@getLogin');
+    Route::post('auth/login', 'Auth\AuthController@postLogin');
+    Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 // Registration routes...
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+    Route::get('auth/register', 'Auth\AuthController@getRegister');
+    Route::post('auth/register', 'Auth\AuthController@postRegister');
