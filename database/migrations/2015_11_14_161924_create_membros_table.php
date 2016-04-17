@@ -42,8 +42,6 @@ class CreateMembrosTable extends Migration
             $table->boolean('quinta');
             $table->boolean('sexta');
 
-            $table->boolean('dia');
-
             $table->timestamps();
         });
     }

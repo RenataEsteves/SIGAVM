@@ -21,7 +21,7 @@ class MembrosController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
         $membros = Membro::all()->sortBy('nome');
@@ -50,21 +50,11 @@ class MembrosController extends Controller
     {
         $input = $request->all();
 
-        $contDias = 0;
-
-        if(isset($request->dia)) {
-            $contDias = count($request->dia);
-
-            foreach($request->dia as $i => $item){
-                $input[$i] = "$item";
-            }
-
-            unset($input['dia']);
-        }
-
         $membro = new Membro();
 
-        $input["qtdDias"]=$contDias;
+        $input["qtdDias"]=count($request->dia);
+
+        $input = $this->check_dias($request->dia, $input);
 
 //        dd($input);
 
@@ -84,7 +74,6 @@ class MembrosController extends Controller
 
         $membros = new Membro();
         $membro = $membros->find($id);
-
         $instituicao = new Instituicao();
         $instituicao = $instituicao->find($membro->id_Inst);
 
@@ -116,7 +105,18 @@ class MembrosController extends Controller
     {
         $membro = Membro::findOrFail($id);
         $input = $request->all();
+
+        $input['segunda'] = isset($request->dia['segunda']) ? 1 : 0;
+        $input['terca'] = isset($request->dia['terca']) ? 1 : 0;
+        $input['quarta'] = isset($request->dia['quarta']) ? 1 : 0;
+        $input['quinta'] = isset($request->dia['quinta']) ? 1 : 0;
+        $input['sexta'] = isset($request->dia['sexta']) ? 1 : 0;
+
+        $input['qtdDias']=count($request->dia);
+
+//        dd($input);
         $membro->fill($input)->save();
+
         return redirect('/membros');
     }
 
@@ -132,5 +132,19 @@ class MembrosController extends Controller
         $membro->delete();
 
         return redirect('/membros');
+    }
+    private function check_dias ($dia, $input){
+
+        if(isset($dia)) {//Verifica se a variavel esta setada e vazia.
+
+            foreach($dia as $i => $item){//Varre o array um-por-um coloca o indice em "i" e o conteudo do indice em "item"
+                $input[$i] = "$item";
+            }
+
+            unset($input['dia']);
+
+            return $input;
+        }
+
     }
 }

@@ -82,19 +82,19 @@
                         <label for="tipo" class="col-xs-2 control-label"><p class=" text-left">Selecione os dias:</p></label>
                         <div class="col-xs-6">
                             <label class="checkbox-inline">
-                                <input type="checkbox" name="dia[segunda]" value="1" {{ $membro->dia ="segunda" ? 'checked="checked"' : '' }}> Segunda
+                                <input type="checkbox" name="dia[segunda]" value="1" {{ $membro->segunda ? 'checked' : '' }}> Segunda
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" name="dia[terca]" value="1"> Terça
+                                <input type="checkbox" name="dia[terca]" value="1" {{ $membro->terca ? 'checked' : '' }}> Terça
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" name="dia[quarta]" value="1"> Quarta
+                                <input type="checkbox" name="dia[quarta]" value="1" {{ $membro->quarta ? 'checked' : '' }}> Quarta
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" name="dia[quinta]" value="1"> Quinta
+                                <input type="checkbox" name="dia[quinta]" value="1" {{ $membro->quinta ? 'checked' : '' }}> Quinta
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" name="dia[sexta]" value="1"> Sexta
+                                <input type="checkbox" name="dia[sexta]" value="1" {{ $membro->sexta ? 'checked' : '' }}> Sexta
                             </label>
                         </div>
                         {{--<!-- Ano de cadastro do membro-->--}}

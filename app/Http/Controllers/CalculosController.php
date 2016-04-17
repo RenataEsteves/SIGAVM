@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Calculos;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,7 +17,8 @@ class CalculosController extends Controller
      */
     public function index()
     {
-        return view('calculos.index');
+        $calculos = Calculos::all()->sortBy('mes');
+        return view('calculos.index', compact('calculos'));
     }
 
     /**

@@ -20,21 +20,20 @@
                     </div>
                     <div class="table table-striped">
                         <div class="col-xs-6">
-                            <table class="table table-striped">
-                                <tr>
-                                    <th> Qt. de Fretes</th>
-                                    <th> Valor do Frete</th>
-                                    <th> Valor do Mensal</th>
-                                    <th> Valor/Dia</th>
-                                </tr>
+                            <table class="table table-striped" align="center">
+                                <th>
+                                    <td> Qt. de Fretes</td>
+                                    <td> Valor do Frete</td>
+                                    <td> Valor do Mensal</td>
+                                    <td> Valor/Dia</td>
+                                </th>
 
                                 <tr>
-                                    <th> 22</th>
-                                    <th> 670,00</th>
-                                    <th> R$ 9.325,05</th>
-                                    <th> R$ 39,02</th>
+                                    <td> 22</td>
+                                    <td>{{ ($calculos->get('frete')) }}</td>
+                                    <td> R$ 9.325,05</td>
+                                    <td> R$ 39,02</td>
                                 </tr>
-
                             </table>
                         </div>
 
@@ -46,45 +45,46 @@
                 <div class="col-xs-4">
                     <div class="table-responsive">
                         <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <th>Dia(s)</th>
-                                <th>Qt. de Academicos</th>
-                                <th>Total</th>
-                            </tr>
-                            </thead>
+                            <tread>
+                            <th>
+                                <td>Dia(s)</td>
+                                <td>Qt. de Academicos</td>
+                                <td>Total</td>
+                            </th>
+                            </tread>
                             <tbody>
                             <tr>
-                                <th>1</th>
-                                <th>5</th>
-                                <th>5</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>5</td>
                             </tr>
                             <tr>
-                                <th>2</th>
-                                <th>6</th>
-                                <th>12</th>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>12</td>
                             </tr>
                             <tr>
-                                <th>3</th>
-                                <th>7</th>
-                                <th>21</th>
+                                <td>3</td>
+                                <td>7</td>
+                                <td>21</td>
                             </tr>
                             <tr>
-                                <th>4</th>
-                                <th>4</th>
-                                <th>20</th>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>20</td>
                             </tr>
                             <tr>
-                                <th>5</th>
-                                <th>20</th>
-                                <th>100</th>
+                                <td>5</td>
+                                <td>20</td>
+                                <td>100</td>
                             </tr>
                             <!-- Total Geral -->
-                            <tr>
-                                <th>Total Geral</th>
-                                <th>42</th>
-                                <th>158</th>
-                            </tr>
+                            <th>
+                                <td>Total Geral</td>
+                                <td>42</td>
+                                <td>158</td>
+                            </th>
                             </tbody>
 
                         </table>
@@ -114,14 +114,12 @@
                             <thead>
                             <tr>
                                 <th>Dia(s)</th>
-                                <th>Valores a pagar</th>
-                                <th>Valores com taxa</th>
+                                <th>Valores a arrecadar</th>
                             </tr>
                             </thead>
                             <tr>
                                 <th>1</th>
                                 <th>R$ 40,00</th>
-                                <th>R$ 42,25</th>
                             </tr>
                         </table>
                     </div>
