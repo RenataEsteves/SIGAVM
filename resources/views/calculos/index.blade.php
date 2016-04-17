@@ -11,80 +11,91 @@
                 </div>
 
                 <div class="col-xs-12">
-                    <label for="qtfrete" class="col-xs-2 text-left"><p class="text-left">Qt de Fretes:</p></label>
-                    <div class="col-xs-1">
-                        <input type="text" class="form-control" name="qt_frete" />
-                    </div>
-                    <div class="col-xs-2">
+                    <form class="form-horizontal" method="post" action="/calculos/calcular">
                         <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-retweet"></i> Calcular</button>
-                    </div>
-                    <div class="table table-striped">
-                        <div class="col-xs-6">
-                            <table class="table table-striped" align="center">
-                                <th>
-                                    <td> Qt. de Fretes</td>
-                                    <td> Valor do Frete</td>
-                                    <td> Valor do Mensal</td>
-                                    <td> Valor/Dia</td>
-                                </th>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="qtdFrete" class="col-xs-1 text-left"><p>Qt. Frete:</p></label>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" name="qt_frete" />
+                                </div>
+                            </div>
 
-                                <tr>
-                                    <td> 22</td>
-                                    <td>{{ ($calculos->get('frete')) }}</td>
-                                    <td> R$ 9.325,05</td>
-                                    <td> R$ 39,02</td>
-                                </tr>
-                            </table>
+                            <div class="form-group">
+                                <label for="mesRef" class="col-xs-1 text-left"><p>Mês:</p></label>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" name="mes_ref" />
+                                </div>
+                            </div>
                         </div>
 
+
+                        {{--</form>--}}
+                </div>
+                <div class="table table-striped">
+                    <div class="col-xs-6">
+                        <table class="table table-striped">
+                            <tr>
+                                <th> Qt. de Fretes</th>
+                                <th> Valor do Frete</th>
+                                <th> Valor do Mensal</th>
+                                <th> Valor/Dia</th>
+                            </tr>
+
+                            <tr>
+                                <th> {{$calculos[0]->qtd1Frete}}</th>
+                                <th> R$ {{$calculos[0]->frete}}</th>
+                                <th> R$ {{$calculos[0]['fretB']}}</th>
+                                <th> R$ 39,02</th>
+                            </tr>
+
+                        </table>
                     </div>
-
-
                 </div>
 
                 <div class="col-xs-4">
                     <div class="table-responsive">
                         <table class="table table-striped">
-                            <tread>
-                            <th>
-                                <td>Dia(s)</td>
-                                <td>Qt. de Academicos</td>
-                                <td>Total</td>
-                            </th>
-                            </tread>
+                            <thead>
+                            <tr>
+                                <th>Dia(s)</th>
+                                <th>Qt. de Academicos</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
                             <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>5</td>
-                                <td>5</td>
+                                <th>1</th>
+                                <th>5</th>
+                                <th>5</th>
                             </tr>
                             <tr>
-                                <td>2</td>
-                                <td>6</td>
-                                <td>12</td>
+                                <th>2</th>
+                                <th>6</th>
+                                <th>12</th>
                             </tr>
                             <tr>
-                                <td>3</td>
-                                <td>7</td>
-                                <td>21</td>
+                                <th>3</th>
+                                <th>7</th>
+                                <th>21</th>
                             </tr>
                             <tr>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>20</td>
+                                <th>4</th>
+                                <th>4</th>
+                                <th>20</th>
                             </tr>
                             <tr>
-                                <td>5</td>
-                                <td>20</td>
-                                <td>100</td>
+                                <th>5</th>
+                                <th>20</th>
+                                <th>100</th>
                             </tr>
                             <!-- Total Geral -->
-                            <th>
-                                <td>Total Geral</td>
-                                <td>42</td>
-                                <td>158</td>
-                            </th>
+                            <tr>
+                                <th>Total Geral</th>
+                                <th>42</th>
+                                <th>158</th>
+                            </tr>
                             </tbody>
 
                         </table>
@@ -114,7 +125,7 @@
                             <thead>
                             <tr>
                                 <th>Dia(s)</th>
-                                <th>Valores a arrecadar</th>
+                                <th>Valores arrecadados</th>
                             </tr>
                             </thead>
                             <tr>

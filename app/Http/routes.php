@@ -16,6 +16,7 @@
 //});
 
 Route::get('/calculos', 'CalculosController@Index');
+Route::post('/calculos/calcular', 'CalculosController@Calcular');
 
     Route::resource('/', 'MembrosController');
 //Route::resource('/', 'HomeController');

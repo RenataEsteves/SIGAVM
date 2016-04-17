@@ -15,7 +15,7 @@ class Calculos extends Migration
         Schema::create('calculos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mes', 10);
-            $table->smallInteger('qtd1Frete');
+            $table->smallInteger('qtdFrete');
             $table->decimal('frete', 10, 2);
             $table->decimal('valMensal', 10, 2);
             $table->decimal('valDia', 10, 2);
