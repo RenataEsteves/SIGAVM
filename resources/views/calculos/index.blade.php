@@ -44,7 +44,7 @@
                             </tr>
 
                             <tr>
-                                <th> {{$calculos[0]->qtd1Frete}}</th>
+                                <th> {{$calculos[0]->qtdFrete}}</th>
                                 <th> R$ {{$calculos[0]->frete}}</th>
                                 <th> R$ {{$calculos[0]['fretB']}}</th>
                                 <th> R$ 39,02</th>

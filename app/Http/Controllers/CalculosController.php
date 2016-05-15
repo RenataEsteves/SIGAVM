@@ -118,15 +118,15 @@ class CalculosController extends Controller
         $vT5dias = ($v5dias + 2.50);
 
         //Quadro 'Valores a Arrecadar'
-        $vlrAr1dia = $qt1Dia * $v1dia; //Valor arrecadado pelo aqueles que pagam 1 dia.
-        $vlrAr2dia = $qt2Dias * $v2dias; //Valor arrecadado pelo aqueles que pagam 2 dias.
-        $vlrAr3dia = $qt3Dias * $v3dias; //Valor arrecadado pelo aqueles que pagam 3 dias.
-        $vlrAr4dia = $qt4Dias * $v4dias; //Valor arrecadado pelo aqueles que pagam 4 dias.
-        $vlrAr5dia = $qt5Dias * $v5dias; //Valor arrecadado pelo aqueles que pagam 5 dias.
+        $vlrAr1dia = $qt1Dia * $v1dia; //Valor arrecadado por aqueles que pagam 1 dia.
+        $vlrAr2dia = $qt2Dias * $v2dias; //Valor arrecadado por aqueles que pagam 2 dias.
+        $vlrAr3dia = $qt3Dias * $v3dias; //Valor arrecadado por aqueles que pagam 3 dias.
+        $vlrAr4dia = $qt4Dias * $v4dias; //Valor arrecadado por aqueles que pagam 4 dias.
+        $vlrAr5dia = $qt5Dias * $v5dias; //Valor arrecadado por aqueles que pagam 5 dias.
 
         $calculos = [0 => array(
             'frete' => $fretes,
-            'qtd1Frete' => $valorFrete,
+            'qtdFrete' => $valorFrete,
             'fretB' => $freteBruto
         )];
         return view('calculos.index', compact('calculos'));

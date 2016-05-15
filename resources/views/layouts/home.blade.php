@@ -2,52 +2,23 @@
 
 @section('content')
 
-    {{--<head>--}}
-        {{--<title>Laravel</title>--}}
-
-        {{--<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">--}}
-
-        {{--<style>--}}
-            {{--html, body {--}}
-                {{--height: 100%;--}}
-            {{--}--}}
-
-            {{--body {--}}
-                {{--margin: 0;--}}
-                {{--padding: 0;--}}
-                {{--width: 100%;--}}
-                {{--display: table;--}}
-                {{--font-weight: 100;--}}
-                {{--font-family: 'Lato';--}}
-            {{--}--}}
-
-            {{--.container {--}}
-                {{--text-align: center;--}}
-                {{--display: table-cell;--}}
-                {{--vertical-align: middle;--}}
-            {{--}--}}
-
-            {{--.content {--}}
-                {{--text-align: center;--}}
-                {{--display: inline-block;--}}
-            {{--}--}}
-
-            {{--.title {--}}
-                {{--font-size: 96px;--}}
-            {{--}--}}
-        {{--</style>--}}
-    {{--</head>--}}
-    <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <img style="margin-top: 15%" src="bootstrap/img/construcao.png">
+            <div class="col-xs-12">
+                <div class="col-xs-12 text-center">
+                    <br>
+                    <h1> Pagina Home! </h1>
+                    <br>
+                </div>
             </div>
         </div>
-        {{--<div class="content">--}}
-            {{--<div class="title">Laravel 5</div>--}}
-        {{--</div>--}}
     </div>
-    </body>
+
+    {{--<body>--}}
+    {{--<div class="container col-xs-12">--}}
+    {{--<img style="margin-top: 15%" src="bootstrap/img/pagina_construcao.jpg">--}}
+    {{--<div class="title">Laravel 5</div>--}}
+    {{--</div>--}}
+    {{--</body>--}}
 
 @endsection
