@@ -44,7 +44,11 @@ class CalculosController extends Controller
 
         $calculos = new Calculos();
 
+
+//dd($input);
         $calculos->create($input);
+
+
 
         return redirect('calculos');
     }

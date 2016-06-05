@@ -14,7 +14,7 @@ class Calculos extends Migration
     {
         Schema::create('calculos', function (Blueprint $table) {
             $table->increments('id');
-            $table->smallInteger('mess');
+            $table->smallInteger('mes');
             $table->smallInteger('qtdFrete');
             $table->decimal('frete', 10, 2);// Essa variavel nao e pra pegar o valor do frete, mas sim pra guardar um historico
             $table->decimal('valBruto', 10, 2);

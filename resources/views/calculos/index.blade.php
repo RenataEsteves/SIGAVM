@@ -31,7 +31,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <label for="mesRef" class="col-xs-2 text-left"><p>Mês:</p></label>
                             <div class="col-xs-6">
-                                <select class="form-control" name="mes_ref">
+                                <select class="form-control" name="mes">
                                     <option value="1">Janeiro</option>
                                     <option value="2">Fevereiro</option>
                                     <option value="3">Março</option>
@@ -47,7 +47,6 @@
                                 </select>
                             </div>
                         </div>
-                        <input type="hidden" class="form-control" name="mess" value="{{ isset($calculos['mes']) ? $calculos['mess'] : '0' }}" />
                         <input type="hidden" class="form-control" name="qtdFrete" value="{{ isset($calculos['frete']) ? $calculos['frete'] : '0' }}" />
                         <input type="hidden" class="form-control" name="frete" value="{{ isset($calculos['valFrete']) ? $calculos['valFrete'] : '0' }}" />
                         <input type="hidden" class="form-control" name="valBruto" value="{{ isset($calculos['fretB']) ? $calculos['fretB'] : '0' }}" />
@@ -82,11 +81,8 @@
                         <input type="hidden" class="form-control" name="val4Dias" value="{{ isset($calculos['a4Dias']) ? $calculos['a4Dias'] : '0' }}" />
                         <input type="hidden" class="form-control" name="val5Dias" value="{{ isset($calculos['a5Dias']) ? $calculos['a5Dias'] : '0' }}" />
                         <input type="hidden" class="form-control" name="valGeral" value="{{ isset($calculos['aGeralzao']) ? $calculos['aGeralzao'] : '0' }}" />
-
                     </form>
                 </div>
-
-
                 <div class="table-responsive">
                     <div class="col-xs-6">
                         <table class="table table-striped">
@@ -98,9 +94,8 @@
                             </tr>
 
                             <tr>
-                                <td>  {{ isset($calculos['frete']) ? $calculos['frete'] : '------------' }} </td>
+                                <td>  {{ isset($calculos['frete']) ? $calculos['frete'] : '0' }} </td>
                                 <td>  R$ {{ isset($calculos['valFrete']) ? $calculos['valFrete'] : '0' }} </td>
-                                <td>  R$ {{ isset($calculos['fretB']) ? $calculos['fretB'] : '0' }} </td>
                                 <td>  R$ {{ isset($calculos['valDia']) ? $calculos['valDia'] : '0' }} </td>
                             </tr>
 
