@@ -40,7 +40,13 @@ class CalculosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        $calculos = new Calculos();
+
+        $calculos->create($input);
+
+        return redirect('calculos');
     }
 
     /**

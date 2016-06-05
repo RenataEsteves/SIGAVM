@@ -57,8 +57,6 @@ class MembrosController extends Controller
 
         $input = $this->check_dias($request->dia, $input);
 
-//        dd($input);
-
         $membro->create($input);
         return redirect('membros');
 

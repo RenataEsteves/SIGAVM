@@ -15,10 +15,9 @@ Route::get('/', function () {
     return view('layouts.home');
 });
 
-Route::get('/calculos', 'CalculosController@Index');
+Route::resource('/calculos', 'CalculosController');
 Route::post('/calculos/calcular', 'CalculosController@Calcular');
-
-//Route::resource('/', 'MembrosController');
+Route::post('/calculos/store', 'CalculosController@Store');
 
 Route::resource('membros', 'MembrosController');
 Route::get('/membros/show', 'MembrosController@Show');
