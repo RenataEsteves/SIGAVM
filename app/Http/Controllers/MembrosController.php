@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Monolog\Handler\ErrorLogHandler;
 
 class MembrosController extends Controller
 {
@@ -112,9 +113,12 @@ class MembrosController extends Controller
         $input['quinta'] = isset($request->dia['quinta']) ? 1 : 0;
         $input['sexta'] = isset($request->dia['sexta']) ? 1 : 0;
 
-        $input['qtdDias']=count($request->dia);
+        if ($input['ativo'] == 1) {
+            $input['qtdDias'] = count($request->dia);
+        } else {
+            $input['qtdDias'] = 0;
+        }
 
-//        dd($input);
         $membro->fill($input)->save();
 
         return redirect('/membros');
