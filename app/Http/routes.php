@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::resource('/calculos', 'CalculosController');
 Route::post('/calculos/calcular', 'CalculosController@Calcular');
 Route::post('/calculos/store', 'CalculosController@Store');
+Route::post('/calculos/show', 'CalculosController@Show');
 
 Route::resource('membros', 'MembrosController');
 Route::get('/membros/show', 'MembrosController@Show');

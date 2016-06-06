@@ -44,8 +44,6 @@ class CalculosController extends Controller
 
         $calculos = new Calculos();
 
-
-//dd($input);
         $calculos->create($input);
 
 
@@ -61,7 +59,7 @@ class CalculosController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('calculos.show');
     }
 
     /**

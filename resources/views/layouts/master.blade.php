@@ -45,7 +45,13 @@
                         <li><a href="/instituicao/create"> Instituição </a></li>
                     </ul>
                 </li>
-                <li><a href="/calculos"> Calcular </a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculos <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/calculos"> Criar </a></li>
+                        <li><a href="/calculos/show"> Calcular </a></li>
+                    </ul>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
