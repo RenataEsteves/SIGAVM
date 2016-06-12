@@ -14,14 +14,17 @@
 Route::get('/', function () {
     return view('layouts.home');
 });
+Route::get('/home', function () {
+    return view('layouts.home');
+});
 
 Route::resource('/configs', 'ConfiguracoesController');
 
 Route::resource('/calculos', 'CalculosController');
-Route::get('/calculos/create', 'CalculosController@Create');
-Route::get('/calculos/store', 'CalculosController@Store');
-Route::get('/calculos/show', 'CalculosController@Show');
-Route::get('/calculos/exibir', 'CalculosController@Exibir');
+Route::post('/calculos/create', 'CalculosController@Create');
+Route::post('/calculos/store', 'CalculosController@Store');
+Route::post('/calculos/show', 'CalculosController@Show');
+Route::post('/calculos/exibir', 'CalculosController@Exibir');
 
 Route::resource('membros', 'MembrosController');
 Route::get('/membros/show', 'MembrosController@Show');

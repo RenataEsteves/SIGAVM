@@ -10,7 +10,7 @@
                     <br>
                 </div>
 
-                <form class="form-horizontal" method="post" action="{{route('calculos.exibir')}}">
+                <form class="form-horizontal" method="post" action="/calculos/exibir">
                     <div class="form-horizontal col-xs-6">
                         {{--Div do mês--}}
                         <div class="form-group ">
@@ -48,9 +48,9 @@
                             </tr>
                             <tr>
                                 <td> {{ isset($calculos->qtdFrete) ? $calculos->qtdFrete : '0' }} </td>
-                                <td> {{ isset($calculos->frete) ? $calculos->frete : '0' }} </td>
-                                <td> {{ isset($calculos->valBruto) ? $calculos->valBruto : '0' }} </td>
-                                <td> {{ isset($calculos->valDiaa) ? $calculos->valDiaa : '0' }} </td>
+                                <td> R$ {{ isset($calculos->frete) ? $calculos->frete : '0' }} </td>
+                                <td> R$ {{ isset($calculos->valBruto) ? $calculos->valBruto : '0' }} </td>
+                                <td> R$ {{ isset($calculos->valDiaa) ? $calculos->valDiaa : '0' }} </td>
                             </tr>
 
                         </table>

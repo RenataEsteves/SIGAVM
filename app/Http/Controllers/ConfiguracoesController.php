@@ -25,8 +25,9 @@ class ConfiguracoesController extends Controller
             ->get();
 
         $frete = $fret[0];//Tras o valor de frete pra fora do indice 0.
-//        dd($frete);
-        return view('configuracoes.configs', compact('configuracoes'));
+//        return view('configuracoes.configs', compact('configuracao'));
+        return view('/configuracoes.configs', array('configuracao' => $frete));
+
 
     }
 

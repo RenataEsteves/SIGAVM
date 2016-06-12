@@ -17,9 +17,9 @@
         <div class="col-xs-12 text-center">
             <label for="frete" class="col-xs-1 control-label"><p class="text-left">Frete: </p></label>
             <div class="col-xs-3">
-                <input type="text" class="form-control" name="frete" placeholder=$conf>
+                {{--<input type="text" class="form-control" name="frete" placeholder=$conf>--}}
+                <input type="text" class="form-control" name="frete" value="{{$frete->frete}}" />
             </div>
-{{--            <td> {{$configuracoes->frete}} </td>--}}
             <div class="form-group">
                 <div class="col-xs-offset-11 col-xs-0">
                     <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i> Salvar</button>

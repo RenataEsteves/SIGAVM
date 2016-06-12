@@ -23,8 +23,6 @@ class CalculosController extends Controller
 
     public function index()
     {
-//        $calculos = Calculos::all()->sortBy('mes');
-//        dd($calculos);
         return view('calculos.index', compact('calculos'));
     }
 
@@ -193,17 +191,15 @@ class CalculosController extends Controller
     {
         //
     }
-    public function exibir($mes)
+    public function exibir(Request $request)
     {
 
-        $Mes_ref = $mes;
-        dd($Mes_ref);
-
-//        $calculo = $request->get('mes');
-        $calculo = DB::table('calculos')->where('mes', $Mes_ref)->get();
+        $mes = $request->get('mes');
+        $calculo = DB::table('calculos')->where('mes', $mes)->get();
         $calculos = $calculo[0];//Tras os valores para fora do indice 0.
 
         return view('calculos.show', compact('calculos'));
 
     }
+
 }
