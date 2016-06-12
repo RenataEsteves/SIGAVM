@@ -16,9 +16,15 @@ class CalculosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $calculos = Calculos::all()->sortBy('mes');
+//        $calculos = Calculos::all()->sortBy('mes');
+//        dd($calculos);
         return view('calculos.index', compact('calculos'));
     }
 
@@ -27,75 +33,8 @@ class CalculosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $input = $request->all();
-
-        $calculos = new Calculos();
-
-        $calculos->create($input);
-
-
-
-        return redirect('calculos');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        return view('calculos.show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-    public function calcular(Request $request){
 
 //        Busca a ultima linha da tabela configurações
         $valFrete = DB::table('configuracoes')
@@ -154,12 +93,12 @@ class CalculosController extends Controller
             'valDia' => $valorDia, //Valor do dia.
             'fretB' => $freteBruto, //frete bruto
 
-            'q1Dia' => $qt1Dia,
-            'q2Dias' => $qt2Dias,
+            'q1Dia' => $qt1Dia, //Acumula quantidade de pessoas que vai 1 dia;
+            'q2Dias' => $qt2Dias, //Acumula quantidade de pessoas que vai 2 dias;
             'q3Dias' => $qt3Dias, //Acumula quantidade de pessoas que vai 3 dias;
-            'q4Dias' => $qt4Dias,
-            'q5Dias' => $qt5Dias,
-            'qGeralzao' => $qGeral,
+            'q4Dias' => $qt4Dias, //Acumula quantidade de pessoas que vai 4 dias;
+            'q5Dias' => $qt5Dias, //Acumula quantidade de pessoas que vai 5 dias;
+            'qGeralzao' => $qGeral, //Acumula quantidade geral;
 
             't1Dia' => $qtt1Dia,
             't2Dias' => $qtt2Dias,
@@ -190,6 +129,81 @@ class CalculosController extends Controller
 
         );
         return view('calculos.index', compact('calculos'));
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $input = $request->all();
+
+        $calculos = new Calculos();
+
+        $calculos->create($input);
+
+        return redirect('calculos');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show()
+    {
+        return view('calculos.show');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+    public function exibir($mes)
+    {
+
+        $Mes_ref = $mes;
+        dd($Mes_ref);
+
+//        $calculo = $request->get('mes');
+        $calculo = DB::table('calculos')->where('mes', $Mes_ref)->get();
+        $calculos = $calculo[0];//Tras os valores para fora do indice 0.
+
+        return view('calculos.show', compact('calculos'));
 
     }
 }

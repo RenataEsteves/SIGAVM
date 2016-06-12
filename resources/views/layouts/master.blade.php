@@ -49,7 +49,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculos <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/calculos"> Criar </a></li>
-                        <li><a href="/calculos/show"> Calcular </a></li>
+                        <li><a href="/calculos/show"> Exibir </a></li>
                     </ul>
                 </li>
             </ul>
@@ -61,6 +61,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }}&nbsp&nbsp&nbsp<span class="glyphicon glyphicon-user"></span></span> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="{{ url('/configs') }}"><i class="glyphicon glyphicon-wrench"></i> Configurações </a></li>
+                            <li role="separator" class="divider"></li>
                             <li><a href="{{ url('/auth/logout') }}"><i class="glyphicon glyphicon-off"></i> Sair </a></li>
                         </ul>
                     </li>

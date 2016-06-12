@@ -6,22 +6,28 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
-class HomeController extends Controller
+class ConfiguracoesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
-        return view('layouts.home');
+
+        $fret = DB::table('configuracoes')
+            ->orderBy('id', 'desc')
+            ->take(1)
+            ->select('frete')
+            ->get();
+
+        $frete = $fret[0];//Tras o valor de frete pra fora do indice 0.
+//        dd($frete);
+        return view('configuracoes.configs', compact('configuracoes'));
+
     }
 
     /**
@@ -31,7 +37,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

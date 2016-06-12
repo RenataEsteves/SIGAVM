@@ -1,23 +1,13 @@
 @extends('layouts.master')
 
-@section('content')
+@section('Content')
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="col-xs-12 text-center">
-                    <br>
-                    <h1> Cálculos </h1>
-                    <br>
-                </div>
+        <div class="col-xs-12">
+            <div class="col-xs-12 text-center">
+                <br>
+                <img style="margin-top: 4%" src="bootstrap/img/pagina_construcao.jpg">
+                <br>
             </div>
         </div>
     </div>
-
-    {{--<body>--}}
-    {{--<div class="container col-xs-12">--}}
-    {{--<img style="margin-top: 15%" src="bootstrap/img/pagina_construcao.jpg">--}}
-    {{--<div class="title">Laravel 5</div>--}}
-    {{--</div>--}}
-    {{--</body>--}}
-
 @endsection

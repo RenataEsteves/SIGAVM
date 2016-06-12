@@ -13,7 +13,7 @@
                 {{--Div que engloba os dois forms (Qt. Frete e Mes)--}}
                 <div class="form-horizontal col-xs-6">
                     {{--Form da quantidade de frete com botão calcular--}}
-                    <form class="form-horizontal" method="post" action="/calculos/calcular">
+                    <form class="form-horizontal" method="post" action="/calculos/create">
                         <div class="form-group">
                             <label for="qtdFrete" class="col-xs-2 text-left"><p>Qt. Frete:</p></label>
                             <div class="col-xs-6">
@@ -96,6 +96,7 @@
                             <tr>
                                 <td>  {{ isset($calculos['frete']) ? $calculos['frete'] : '0' }} </td>
                                 <td>  R$ {{ isset($calculos['valFrete']) ? $calculos['valFrete'] : '0' }} </td>
+                                <td>  R$ {{ isset($calculos['fretB']) ? $calculos['fretB'] : '0' }} </td>
                                 <td>  R$ {{ isset($calculos['valDia']) ? $calculos['valDia'] : '0' }} </td>
                             </tr>
 
@@ -158,33 +159,33 @@
                                 </tr>
                                 <tr>
                                     <th>1</th>
-                                    <td>  {{ isset($calculos['v1Dia']) ? $calculos['v1Dia'] : '0' }} </td>
-                                    <td>  {{ isset($calculos['vt1Dia']) ? $calculos['vt1Dia'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['v1Dia']) ? $calculos['v1Dia'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['vt1Dia']) ? $calculos['vt1Dia'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>2</th>
-                                    <td>  {{ isset($calculos['v2Dias']) ? $calculos['v2Dias'] : '0' }} </td>
-                                    <td>  {{ isset($calculos['vt2Dias']) ? $calculos['vt2Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['v2Dias']) ? $calculos['v2Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['vt2Dias']) ? $calculos['vt2Dias'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>3</th>
-                                    <td>  {{ isset($calculos['v3Dias']) ? $calculos['v3Dias'] : '0' }} </td>
-                                    <td>  {{ isset($calculos['vt3Dias']) ? $calculos['vt3Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['v3Dias']) ? $calculos['v3Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['vt3Dias']) ? $calculos['vt3Dias'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>4</th>
-                                    <td>  {{ isset($calculos['v4Dias']) ? $calculos['v4Dias'] : '0' }} </td>
-                                    <td>  {{ isset($calculos['vt4Dias']) ? $calculos['vt4Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['v4Dias']) ? $calculos['v4Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['vt4Dias']) ? $calculos['vt4Dias'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>5</th>
-                                    <td>  {{ isset($calculos['v5Dias']) ? $calculos['v5Dias'] : '0' }} </td>
-                                    <td>  {{ isset($calculos['vt5Dias']) ? $calculos['vt5Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['v5Dias']) ? $calculos['v5Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['vt5Dias']) ? $calculos['vt5Dias'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>Total Geral</th>
-                                    <td>  {{ isset($calculos['vGeralzao']) ? $calculos['vGeralzao'] : '0' }} </td>
-                                    <td>  {{ isset($calculos['vtGeralzao']) ? $calculos['vtGeralzao'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['vGeralzao']) ? $calculos['vGeralzao'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['vtGeralzao']) ? $calculos['vtGeralzao'] : '0' }} </td>
                                 </tr>
                             </table>
                         </div>
@@ -198,27 +199,27 @@
                                 </tr>
                                 <tr>
                                     <th>1</th>
-                                    <td>  {{ isset($calculos['a1Dia']) ? $calculos['a1Dia'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['a1Dia']) ? $calculos['a1Dia'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>2</th>
-                                    <td>  {{ isset($calculos['a2Dias']) ? $calculos['a2Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['a2Dias']) ? $calculos['a2Dias'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>3</th>
-                                    <td>  {{ isset($calculos['a3Dias']) ? $calculos['a3Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['a3Dias']) ? $calculos['a3Dias'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>4</th>
-                                    <td>  {{ isset($calculos['a4Dias']) ? $calculos['a4Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['a4Dias']) ? $calculos['a4Dias'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>5</th>
-                                    <td>  {{ isset($calculos['a5Dias']) ? $calculos['a5Dias'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['a5Dias']) ? $calculos['a5Dias'] : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>Total Geral</th>
-                                    <td>  {{ isset($calculos['aGeralzao']) ? $calculos['aGeralzao'] : '0' }} </td>
+                                    <td>  R$ {{ isset($calculos['aGeralzao']) ? $calculos['aGeralzao'] : '0' }} </td>
                                 </tr>
                             </table>
                         </div>

@@ -148,6 +148,5 @@ class MembrosController extends Controller
 
             return $input;
         }
-
     }
 }

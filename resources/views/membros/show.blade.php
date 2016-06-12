@@ -9,7 +9,6 @@
                     <h1> Membro [Detalhes] </h1>
                     <br>
                 </div>
-
                 <div class="table-responsive">
                     <table class="table table-striped"> {{--action="/membros/{{$membro->id}}"--}}
                         {{--{{ csrf_field() }}--}}
@@ -40,7 +39,7 @@
                             <td>{{ $membro->foneEmerg }}</td>
                             <td>{{ $membro->email }}</td>
                             <td>{{ $membro->anoCadastro }}</td>
-{{--                            <td>{{ $membro->qtdDias }}</td>--}}
+                            {{--                            <td>{{ $membro->qtdDias }}</td>--}}
                             <td>{{ $membro->ativo  == 1 ? 'Ativo':'Inativo' }}</td>
                         </tr>
                         </tbody>
@@ -85,12 +84,10 @@
                             </tr>
                             </tbody>
                         </table>
-
                     </table>
                 </div>
             </div>
             <div class="col-xs-offset-11 col-xs-1">
-                {{--<a href="/membros" class="btn btn-sm btn-default">Voltar</a>--}}
                 <a href="/membros" type="button" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-arrow-left"></i> Voltar</a>
             </div>
         </div>
