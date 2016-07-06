@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Configuracoes;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -25,7 +26,7 @@ class ConfiguracoesController extends Controller
             ->get();
 
         $frete = $fret[0];//Tras o valor de frete pra fora do indice 0.
-//        return view('configuracoes.configs', compact('configuracao'));
+
         return view('/configuracoes.configs', array('configuracao' => $frete));
 
 
@@ -49,7 +50,14 @@ class ConfiguracoesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        $configuracoes = new Configuracoes();
+
+        $configuracoes->create($input);
+//        dd($configuracoes);
+
+        return redirect('configs');
     }
 
     /**

@@ -21,9 +21,19 @@ class CalculosController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('calculos.index', compact('calculos'));
+        $mes = $request->get('mes');
+        $calculo = DB::table('calculos')->select('mes')->get();
+//        Varre todos os indices jogando dentro de um array para ser chegado em calculos.index
+        $mt = array();
+        for ($i = 0; $i < sizeof($calculo); $i++) {
+            array_push($mt, $calculo[$i]->mes);
+        }
+//        dd($calculo);
+//        dd($mt);
+
+        return view('calculos.index', compact('calculo', 'mt'));
     }
 
     /**
@@ -43,7 +53,7 @@ class CalculosController extends Controller
 
         $fretes = $request->get('qt_frete'); //Busca quantidade de fretes feitos no mes
 
-        $valorFrete = $valFrete[0]->frete; //Busca valor do frete.
+        $valorFrete = $valFrete[0]->frete; //Busca valor do frete e traz pra fora do indice 0.
 
         $freteBruto = ($fretes * $valorFrete); //Calcula valor bruto so de fretes.
 
@@ -61,7 +71,7 @@ class CalculosController extends Controller
         $qtt5Dias = ($qt5Dias * 5);//Acumula os dias das pessoas que vão 5 dias
         $diasTotal = ($qtt1Dia + $qtt2Dias + $qtt3Dias + $qtt4Dias + $qtt5Dias);
 
-        $valorDia = round($freteBruto / $diasTotal); //Calcula valor do diad
+        $valorDia = round($freteBruto / $diasTotal); //Calcula valor do dia
 
         //Quadro 'Valores a Pagar', 'Valores com Taxa'
         $v1dia = $valorDia;
@@ -126,7 +136,10 @@ class CalculosController extends Controller
             'aGeralzao' => $vlrGeral,
 
         );
+
+//        dd($vlrAr1dia);
         return view('calculos.index', compact('calculos'));
+
 
     }
 

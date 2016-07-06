@@ -33,7 +33,7 @@
 
 						<label for="telinst" class="col-xs-1 control-label">Fone:</label>
 						<div class="col-xs-2">
-							<input type="text" class="form-control phone" name="fone" placeholder="Ex.: (00) 0000-0000" />
+							<input type="text" class="form-control phone" name="fone" placeholder="Ex.: (00) 00000-0000" size=15/>
 						</div>
 					</div>
 

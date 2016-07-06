@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Configuracoes extends Model
 {
-    //
+    protected $fillable = ['frete'];
 }

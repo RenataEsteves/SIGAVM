@@ -37,6 +37,7 @@ class MembrosController extends Controller
     public function create()
     {
         $insts = Instituicao::all();
+
         return view('membros.create',compact('insts'));
     }
 

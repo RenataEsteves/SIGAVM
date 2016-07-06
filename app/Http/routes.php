@@ -19,6 +19,7 @@ Route::get('/home', function () {
 });
 
 Route::resource('/configs', 'ConfiguracoesController');
+Route::post('/configs/store', 'ConfiguracoesController@Store');
 
 Route::resource('/calculos', 'CalculosController');
 Route::post('/calculos/create', 'CalculosController@Create');

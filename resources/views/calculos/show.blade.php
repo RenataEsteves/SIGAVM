@@ -68,33 +68,33 @@
                                 <tr>
                                     <th>1</th>
                                     <td> {{ isset($calculos->qtd1Dia) ? $calculos->qtd1Dia : '0' }} </td>
-                                    <td> {{ isset($calculos->t1Dia) ? $calculos->t1Dia : '0' }} </td>
+                                    <td> {{ isset($calculos->Totalqtd1Dia) ? $calculos->Totalqtd1Dia : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>2</th>
                                     <td> {{ isset($calculos->qtd2Dias) ? $calculos->qtd2Dias : '0' }} </td>
-                                    <td> {{ isset($calculos->t2Dias) ? $calculos->t2Dias : '0' }} </td>
+                                    <td> {{ isset($calculos->Totalqtd2Dias) ? $calculos->Totalqtd2Dias : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>3</th>
                                     <td> {{ isset($calculos->qtd3Dias) ? $calculos->qtd3Dias : '0' }} </td>
-                                    <td> {{ isset($calculos->t3Dias) ? $calculos->t3Dias : '0' }} </td>
+                                    <td> {{ isset($calculos->Totalqtd3Dias) ? $calculos->Totalqtd3Dias : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>4</th>
                                     <td> {{ isset($calculos->qtd4Dias) ? $calculos->qtd4Dias : '0' }} </td>
-                                    <td> {{ isset($calculos->t3Dias) ? $calculos->t3Dias : '0' }} </td>
+                                    <td> {{ isset($calculos->Totalqtd4Dias) ? $calculos->Totalqtd4Dias : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>5</th>
                                     <td> {{ isset($calculos->qtd5Dias) ? $calculos->qtd5Dias : '0' }} </td>
-                                    <td> {{ isset($calculos->t4Dias) ? $calculos->t4Dias : '0' }} </td>
+                                    <td> {{ isset($calculos->Totalqtd5Dias) ? $calculos->Totalqtd5Dias : '0' }} </td>
                                 </tr>
                                 <!-- Total Geral -->
                                 <tr>
                                     <th>Total Geral</th>
                                     <td> {{ isset($calculos->qtdGeral) ? $calculos->qtdGeral : '0' }} </td>
-                                    <td> {{ isset($calculos->tGeralzao) ? $calculos->tGeralzao : '0' }} </td>
+                                    <td> {{ isset($calculos->TotalqtdGeral) ? $calculos->TotalqtdGeral : '0' }} </td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -159,19 +159,19 @@
                                 </tr>
                                 <tr>
                                     <th>3</th>
-                                    <td> R$ {{ isset($calculos->val2Dias) ? $calculos->val2Dias : '0' }} </td>
+                                    <td> R$ {{ isset($calculos->val3Dias) ? $calculos->val3Dias : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>4</th>
-                                    <td> R$ {{ isset($calculos->val2Dias) ? $calculos->val2Dias : '0' }} </td>
+                                    <td> R$ {{ isset($calculos->val4Dias) ? $calculos->val4Dias : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>5</th>
-                                    <td> R$ {{ isset($calculos->val2Dias) ? $calculos->val2Dias : '0' }} </td>
+                                    <td> R$ {{ isset($calculos->val5Dias) ? $calculos->val5Dias : '0' }} </td>
                                 </tr>
                                 <tr>
                                     <th>Total Geral</th>
-                                    <td> R$ {{ isset($calculos->val2Dias) ? $calculos->val2Dias : '0' }} </td>
+                                    <td> R$ {{ isset($calculos->valGeral) ? $calculos->valGeral : '0' }} </td>
                                 </tr>
                             </table>
                         </div>

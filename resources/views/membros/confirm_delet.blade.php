@@ -6,7 +6,7 @@
                 <h4 class="modal-title"><b>Confirma exclusão?</b></h4>
             </div>
             <div class="modal-body">
-                <p>Tem certeza que deseja deletar o registro de: <b>{{ $membro->nome }}</b> [ID: {{ $membro->id }}]?</p>
+                <p>Tem certeza que deseja deletar o registro: <b>{{ $membro->nome }}</b> [ID: {{ $membro->id }}]?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i> Não</button>

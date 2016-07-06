@@ -24,8 +24,8 @@ class CreateMembrosTable extends Migration
             $table->string('cpf', 14)->unique();
             $table->string('rg', 10);
             $table->string('orgaoEmissor', 12);
-            $table->string('fone', 14);
-            $table->string('foneEmerg', 14);
+            $table->string('fone', 15);
+            $table->string('foneEmerg', 15);
             $table->string('email', 40)->unique();
             $table->string('anoCadastro', 6);
             $table->boolean('ativo');

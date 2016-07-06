@@ -51,11 +51,11 @@
 
                         <label for="cel" class="col-xs-1 control-label"><p class="text-left">Contato:</p></label>
                         <div class="col-xs-2">
-                            <input type="text" class="form-control phone" name="fone" value="{{$membro->fone}}" placeholder="Ex.: (00) 0000-0000" size=14/>
+                            <input type="text" class="form-control phone" name="fone" value="{{$membro->fone}}" placeholder="Ex.: (00) 00000-0000" size=15/>
                         </div>
                         <label for="emer" class="col-xs-1">Contato Emergência:</label>
                         <div class="col-xs-2">
-                            <input type="text" class="form-control phone" name="foneEmerg" value="{{$membro->foneEmerg}}" placeholder="Ex.: (00) 0000-0000" size=14/>
+                            <input type="text" class="form-control phone" name="foneEmerg" value="{{$membro->foneEmerg}}" placeholder="Ex.: (00) 00000-0000" size=15/>
                         </div>
                     </div>
 

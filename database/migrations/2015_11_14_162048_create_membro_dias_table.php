@@ -19,7 +19,7 @@ class CreateMembroDiasTable extends Migration
             $table->foreign('id_Memb')->references('id')->on('membros');
 
             $table->tinyInteger('nPolt');
-            $table->string('dia', 13);
+            $table->string('dia', 7);
             $table->timestamps();
         });
 

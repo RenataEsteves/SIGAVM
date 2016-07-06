@@ -13,23 +13,19 @@
         <br>
         <br>
         <br>
-        {{--<form class="form-horizontal" method="post" action="{{route('')}}">--}}
-        <div class="col-xs-12 text-center">
-            <label for="frete" class="col-xs-1 control-label"><p class="text-left">Frete: </p></label>
-            <div class="col-xs-3">
-                {{--<input type="text" class="form-control" name="frete" placeholder=$conf>--}}
-                <input type="text" class="form-control" name="frete" value="{{$frete->frete}}" />
-            </div>
-            <div class="form-group">
-                <div class="col-xs-offset-11 col-xs-0">
-                    <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i> Salvar</button>
+        <form class="form-horizontal" method="post" action="{{route('configs.store')}}">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <div class="col-xs-12 text-center">
+                <label for="frete" class="col-xs-2 control-label"><p class="text-left">Valor do frete: </p></label>
+                <div class="col-xs-2">
+                    <input type="text" class="form-control" name="frete" value="{{$configuracao->frete}}" />
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-11 col-xs-0">
+                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-saved"></i> Salvar </button>
+                    </div>
                 </div>
             </div>
-
-        </div>
-        {{--</form>--}}
-
+        </form>
     </div>
-
-
 @endsection
