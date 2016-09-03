@@ -10,6 +10,10 @@
                     <br>
                 </div>
 
+                <div class="col-xs-12">
+                    <button onclick="location.href='membros/create'" type="button" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i> Adicionar</button>
+                </div>
+
                 <div class="table-responsive">   {{--}} <label>{{ sizeof($membros) }}</label>--}}
                     <table class="table table-striped">
                         <thead>
@@ -41,6 +45,8 @@
                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" onclick="deletModal({{ $membro }})" data-target="#confirm_delet{{ $membro->id }}"><i class="glyphicon glyphicon-trash"></i> Deletar</button>
                                     {{--</form></td>--}}
                                 </td>
+                            </tr>
+                            @include('membros.confirm_delet',['membro'=>$membro])
                         @endforeach
                         </tbody>
                     </table>
@@ -48,5 +54,4 @@
             </div>
         </div>
     </div>
-    @include('membros.confirm_delet')
 @endsection

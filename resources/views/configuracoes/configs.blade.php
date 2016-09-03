@@ -13,6 +13,9 @@
         <br>
         <br>
         <br>
+        <div class="col-xs-12">
+            <button onclick="location.href='instituicao'" type="button" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i> Instituições</button>
+        </div>
         <form class="form-horizontal" method="post" action="{{route('configs.store')}}">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="col-xs-12 text-center">

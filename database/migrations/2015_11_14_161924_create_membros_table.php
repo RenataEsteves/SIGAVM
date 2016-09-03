@@ -24,6 +24,7 @@ class CreateMembrosTable extends Migration
             $table->string('cpf', 14)->unique();
             $table->string('rg', 10);
             $table->string('orgaoEmissor', 12);
+            $table->smallInteger('estCivil')->unique();
             $table->string('fone', 15);
             $table->string('foneEmerg', 15);
             $table->string('email', 40)->unique();

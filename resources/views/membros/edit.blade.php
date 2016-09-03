@@ -14,13 +14,27 @@
             <div class="col-xs-12">
                 <!--Inicio do Formulário-->
                 <form class="form-horizontal" method="post" action="/membros/{{$membro->id}}">
-                    {{ csrf_field() }}
-                            <!--Nome do Cadêmico-->
+                {{ csrf_field() }}
+                <!--Nome do Cadêmico-->
                     <div class="form-group">
                         <legend>Dados Pessoais</legend>
                         <label for="nome" class="col-xs-2 control-label"><p class="text-left">Nome Completo:</p></label>
-                        <div class="col-xs-10">
+                        <div class="col-xs-7">
                             <input type="text" class="form-control" name="nome" value="{{$membro->nome}}" placeholder="Nome" />
+                        </div>
+
+                        <label for="estCivil" class="col-xs-1">Estado Cívil:</label>
+                        <div class="col-xs-2">
+                            <select class="form-control" name="estCivil">
+                                <option value="1">Solteiro(a)</option>
+                                <option value="2" selected="selected">Casado(a)</option>
+                                {{--<option value="2" {{$membro->estCivil == 1 ? 'selected="selected"'}}>Teste</option>--}}
+                                <option value="3">Separado(a)</option>
+                                <option value="4">Divoriado(a)</option>
+                                <option value="5">Viúvo(a)</option>
+                                {{--selected="selected"--}}
+                            </select>
+                            {{--<input type="text" class="form-control" name="estCivil" {{ $membro->estCivil == 1 ? 'value=Solteiro(a)' : '' }}>--}}
                         </div>
                     </div>
 
@@ -76,8 +90,8 @@
                         </div>
 
                     </div>
-                    {{--</div>--}}
-                    <!--Dias em que estuda -->
+                {{--</div>--}}
+                <!--Dias em que estuda -->
                     <div class="form-group">
                         <label for="tipo" class="col-xs-2 control-label"><p class=" text-left">Selecione os dias:</p></label>
                         <div class="col-xs-6">
@@ -97,12 +111,7 @@
                                 <input type="checkbox" name="dia[sexta]" value="1" {{ $membro->sexta ? 'checked' : '' }}> Sexta
                             </label>
                         </div>
-                        {{--<!-- Ano de cadastro do membro-->--}}
-                        {{--<label for="Cad" class="col-xs-1 control-label">Ano de Cadastro:</label>--}}
-                        {{--<div class="col-xs-2">--}}
-                        {{--<input type="text" name="anoCadastro" placeholder="Ex.: 2015/1">--}}
-                        {{--</div>--}}
-                        <!-- Situação do usuário - ativo ou não-->
+
                         <label for="tipo" class="col-xs-2 control-label">Situação:</label>
                         <div class="col-xs-2">
                             <label class="radio-inline">
@@ -142,7 +151,7 @@
                     <div class="form-group">
                         <div class=" col-xs-offset-11 col-xs-0">
                             <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-ok"></i> Salvar</button>
-                           {{csrf_field()}}
+                            {{csrf_field()}}
                             {{method_field('PUT')}}
                         </div>
                     </div>

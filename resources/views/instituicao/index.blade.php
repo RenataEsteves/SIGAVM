@@ -10,6 +10,10 @@
                     <br>
                 </div>
 
+                <div class="col-xs-12">
+                    <button onclick="location.href='instituicao/create'" type="button" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i> Adicionar</button>
+                </div>
+
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
@@ -34,6 +38,7 @@
                                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#confirm_delet"><i class="glyphicon glyphicon-trash"></i> Deletar</button>
                                 </td>
                             </tr>
+                            @include('instituicao.confirm_delet',['instituicao'=>$instituicao])
                         @endforeach
                         </tbody>
                     </table>
@@ -41,5 +46,4 @@
             </div>
         </div>
     </div>
-    @include('instituicao.confirm_delet')
 @endsection

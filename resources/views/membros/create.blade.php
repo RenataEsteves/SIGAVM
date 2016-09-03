@@ -14,13 +14,25 @@
 			<div class="col-xs-12">
 				<!--Inicio do Formulário-->
 				<form class="form-horizontal" method="post" action="{{route('membros.store')}}">
-					{{ csrf_field() }}
-							<!--Nome do Cadêmico-->
+				{{ csrf_field() }}
+				<!--Nome do Cadêmico-->
 					<div class="form-group">
 						<legend>Dados Pessoais</legend>
 						<label for="nome" class="col-xs-2 control-label"><p class="text-left">Nome Completo:</p></label>
-						<div class="col-xs-10">
+						<div class="col-xs-7">
 							<input type="text" class="form-control" name="nome" placeholder="Nome" />
+						</div>
+
+						<label for="estCivil" class="col-xs-1">Estado Cívil:</label>
+						<div class="col-xs-2">
+							<select class="form-control" name="estCivil">
+								<option value="1">Solteiro(a)</option>
+								<option value="2">Casado(a)</option>
+								<option value="3">Separado(a)</option>
+								<option value="4">Divoriado(a)</option>
+								<option value="5">Viúvo(a)</option>
+								selected="selected"
+							</select>
 						</div>
 					</div>
 
@@ -36,7 +48,7 @@
 							<input type="text" class="form-control" name="orgaoEmissor" placeholder="Ex.: SSP / SESDEC">
 						</div>
 
-						<label for="rg" class="col-xs-1 control-label"><p class="text-left">CPF:</p></label>
+						<label for="cpf" class="col-xs-1 control-label"><p class="text-left">CPF:</p></label>
 						<div class="col-xs-2">
 							<input type="text" class="form-control cpf" name="cpf" placeholder="Ex.: 000.000.000-00" size=14 />
 						</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <TITLE> SIGAVM </TITLE>
+    <TITLE> AAVM </TITLE>
 
     <meta charset="UTF-8">
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"> SIGAVM </a>
+            <a class="navbar-brand" href="#"> AAVM </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -34,19 +34,15 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consultar <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="/despesas"> Despesas </a></li>
+                        <li><a href="/receitas"> Receitas </a></li>
+                        <li role="separator" class="divider"></li>
                         <li><a href="/membros"> Membros </a></li>
-                        <li><a href="/instituicao"> Instituição </a></li>
+                        {{--<li><a href="/instituicao"> Instituição </a></li>--}}
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastrar <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/membros/create"> Membros </a></li>
-                        <li><a href="/instituicao/create"> Instituição </a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculos <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cálculos <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/calculos"> Criar </a></li>
                         <li><a href="/calculos/show"> Exibir </a></li>
@@ -73,7 +69,7 @@
     </div>
 </nav>
 
-<div class="container" style="margin-top: 3%">
+<div class="container" style="margin-top: 5%">
 
     @yield('Content')
 

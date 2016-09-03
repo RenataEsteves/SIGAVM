@@ -37,6 +37,16 @@ Route::get('/instituicao/show', 'InstituicaoController@Show');
 Route::get('/instituicao/edit', 'InstituicaoController@Edit');
 Route::get('/instituicao/delete', 'InstituicaoController@Destroy');
 
+Route::resource('despesas', 'DespesasController');
+Route::get('/despesas/show', 'DespesasController@Show');
+Route::get('/despesas/edit', 'DespesasController@Edit');
+Route::get('/despesas/delete', 'DespesasController@Destroy');
+
+Route::resource('receitas', 'ReceitasController');
+Route::get('/receitas/show', 'ReceitasController@Show');
+Route::get('/receitas/edit', 'ReceitasController@Edit');
+Route::get('/receitas/delete', 'ReceitasController@Destroy');
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');

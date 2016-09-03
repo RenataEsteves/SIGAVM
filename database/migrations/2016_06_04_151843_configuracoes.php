@@ -26,6 +26,6 @@ class Configuracoes extends Migration
      */
     public function down()
     {
-
+        Schema::drop('configuracoes');
     }
 }
